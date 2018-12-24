@@ -13,9 +13,7 @@ sum_odd = 0
 tmp_a = a
 
 while tmp_a != 0:
-    cipfer_a = tmp_a % 10
-
-    if cipfer_a % 2 == 0:
+    if tmp_a % 10 % 2 == 0:
         sum_even += 1
     else:
         sum_odd += 1
