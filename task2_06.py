@@ -10,9 +10,11 @@ import random
 
 number = random.randint(0, 100)
 count = 0
+MAX_COUNT = 10
+
 while True:
     count += 1
-    if count > 10:
+    if count > MAX_COUNT:
         print(f"Количество попыток исчерпано.\nБыло загадано число {number}")
         break
     answer = int(input("Введите число: "))

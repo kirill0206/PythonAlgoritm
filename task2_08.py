@@ -7,15 +7,15 @@ __author__ = 'AKV'
 """
 
 count = int(input("Сколько чисел будет введено? "))
-find_cipfer = int(input("Количество каких необходимо поределить? "))
+find_cipher = int(input("Количество каких необходимо поределить? "))
 count_cipher = 0
 
 for i in range(count):
     number = int(input(f"Введите {i + 1} число: "))
 
     while number > 0:
-        if find_cipfer == number % 10:
+        if find_cipher == number % 10:
             count_cipher += 1
         number = number // 10
 
-print(f"В введеной последовательности чисел цифра {find_cipfer} встретилась {count_cipher} раз(а).")
+print(f"В введеной последовательности чисел цифра {find_cipher} встретилась {count_cipher} раз(а).")

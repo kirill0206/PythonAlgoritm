@@ -10,15 +10,18 @@ max_num_sum = 0
 
 while True:
     number = int(input("Введите натуральное число или '0' для окончания работы программы:"))
-    number_sum = 0
-    tmp = number
+
     if number != 0:
+        number_sum = 0
+        tmp = number
+
         while tmp > 0:
             number_sum += tmp % 10
             tmp = tmp // 10
         if max_num_sum < number_sum:
             max_num_sum = number_sum
             max_num = number
+
     else:
         print(f"Число {max_num} имеет наибольшую сумму цифр {max_num_sum}")
         break
