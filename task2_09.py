@@ -23,5 +23,8 @@ while True:
             max_num = number
 
     else:
-        print(f"Число {max_num} имеет наибольшую сумму цифр {max_num_sum}")
+        if max_num_sum != 0:
+            print(f"Число {max_num} имеет наибольшую сумму цифр {max_num_sum}")
+        else:
+            print("Выход из программы")
         break
