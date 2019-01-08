@@ -11,15 +11,13 @@ rand_array = [random.randint(0, 100) for i in range(200)]
 
 print(rand_array)
 min_1, min_2 = rand_array[0], rand_array[0]
-
+count = 0
 for value in rand_array:
-    if value <= min_1:
-        if value <= min_2:
-            min_2 = value
-        else:
-            min_1 = value
     if value <= min_2:
-        min_2 = value
+        if value <= min_1:
+            min_2, min_1 = min_1, value
+        else:
+            min_2 = value
 
 print(f'{min_1} - {min_2}')
 
