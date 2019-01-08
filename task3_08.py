@@ -8,7 +8,8 @@ __author__ = 'AKV'
 
 ROWS = 4
 COLUMNS = 5
-num_array = [[[0] * COLUMNS] * ROWS]
+num_array = [[0] * COLUMNS] * ROWS
+print(num_array)
 
 for i in range(ROWS):
     sum_row = 0
@@ -20,5 +21,5 @@ for i in range(ROWS):
 
 for rows in num_array:
     for number in rows:
-        print(f"{number:4}", sep='')
+        print(f"{number}", sep='')
     print()
