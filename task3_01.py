@@ -11,26 +11,18 @@ START_DIV = 2
 END_DIV = 9
 count = 0
 
-def rate(number):
-    result = False
-    for x in range(START_DIV, END_DIV + 1):
-        if x
-
 # 1 решение1
+
+
 for i in range(START_NUM, END_NUM + 1):
-    result = False
+    result = True
     for x in range(START_DIV, END_DIV + 1):
         if i % x == 0:
+            result = False
             break
-        else:
-            if x == END_DIV:
-                count += 1
+
+    if not result:
+        count += 1
 
 
-print(f"В диапазоне от {START_NUM} до {END_NUM} нашлось {count} чисел.")
-
-'''
-# 2 решение
-num_list = [num for num in range(START_NUM, END_NUM+1)]
-for
-'''
+print(f"В диапазоне от {START_NUM} до {END_NUM} нашлось {count} чисел кратных любому числу от {START_DIV} до {END_DIV}")
