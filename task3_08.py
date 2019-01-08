@@ -8,13 +8,11 @@ __author__ = 'AKV'
 
 ROWS = 4
 COLUMNS = 5
-i, j = 0, 0
-num_array = [[]]
+num_array = [[[0] * COLUMNS] * ROWS]
 
-while i < ROWS:
-    j = 0
+for i in range(ROWS):
     sum_row = 0
-    while j < COLUMNS - 1:
+    for j in range(COLUMNS - 1):
         number = int(input("введите элемент матрицы: "))
         num_array[i][j] = number
         sum_row += number

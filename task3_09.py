@@ -7,8 +7,6 @@ __author__ = 'AKV'
 import random
 array = [[random.randint(0, 100) for i in range(6)] for j in range(5)]
 
-print(array)
-
 j = 0
 while j < len(array[0]):
     min_in_column = array[0][j]
@@ -19,7 +17,6 @@ while j < len(array[0]):
             min_in_column = array[i][j]
         i += 1
 
-    print(min_in_column)
     if j == 0:
         max_in_min = min_in_column
     else:
@@ -27,4 +24,8 @@ while j < len(array[0]):
             max_in_min = min_in_column
     j += 1
 
+for i in range(len(array)):
+    for j in range(len(array[i])):
+        print(array[i][j], end=' ')
+    print()
 print(f"Максимальный элемент среди минимальных элементов столбцов таблицы равен {max_in_min}")
