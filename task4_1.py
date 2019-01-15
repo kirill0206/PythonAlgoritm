@@ -25,3 +25,5 @@ def num_reverse_1(a):
 def num_reverse_2(a):
     a_str = str(a)
     a_reverse
+
+
