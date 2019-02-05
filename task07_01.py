@@ -13,7 +13,7 @@ MIN = -100
 MAX = 99
 
 
-def random_array(n):
+def get_random_array(n):
     _array = [random.randint(MIN, MAX) for _ in range(n)]
     return _array
 
@@ -23,13 +23,13 @@ def sort_bubbles(_array):
 
     while n < len(_array):
         for i in range(len(_array) - n):
-            if _array[i] > _array[i + 1]:
+            if _array[i] < _array[i + 1]:
                 _array[i], _array[i + 1] = _array[i + 1], _array[i]
 
         n += 1
 
 
-array = random_array(12)
+array = get_random_array(20)
 print(array)
 sort_bubbles(array)
 print(array)
