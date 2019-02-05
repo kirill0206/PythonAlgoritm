@@ -17,8 +17,19 @@ def get_random_array(n):
     _array = [random.randint(MIN, MAX) for _ in range(n)]
     return _array
 
+# версия с урока
+def sort_bubbles_1(_array):
+    n = 1
 
-def sort_bubbles(_array):
+    while n < len(_array):
+        for i in range(len(_array) - 1):
+            if _array[i] < _array[i + 1]:
+                _array[i], _array[i + 1] = _array[i + 1], _array[i]
+
+        n += 1
+
+# чуть модернизированная версия
+def sort_bubbles_2(_array):
     n = 1
 
     while n < len(_array):
@@ -31,6 +42,6 @@ def sort_bubbles(_array):
 
 array = get_random_array(20)
 print(array)
-sort_bubbles(array)
+sort_bubbles_1(array)
 print(array)
 
