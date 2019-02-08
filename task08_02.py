@@ -33,11 +33,10 @@ def search(tree, number, path = ''):
         exit(0)
 
 
-_str = dict(collections.Counter('abrakadabro'))
-print(_str)
+_str = dict(collections.Counter(input('Введите строку: ')))
+
 keys = list(_str.keys())
 keys = keys[::-1]
-print(keys)
 
 _list = []
 code = {}
